@@ -1,0 +1,248 @@
+
+
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:rgb(236, 234, 234);
+    background-image: url(images/black.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+   
+  }
+  #navbar{
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75px;
+    z-index: 999;
+    background-color: rgb(53, 51, 51);
+    position: fixed;
+  }
+  #navbar #nav{
+    float: left;
+    padding-top: 15px;
+  }
+  li{
+    list-style: none;
+    display: inline-block;
+    padding-right: 40px;
+  }
+  li a{
+    text-decoration: none;
+    color: rgb(255, 249, 241);
+    font-size: 18px;
+  }
+  li a:hover{
+    color: rgb(185, 112, 112);
+    font-size: xx-large;
+   
+  }
+  .logo {
+    float: left;
+  }
+  
+  .dropdown{
+    text-decoration: none;
+    color: rgb(255, 249, 241);
+    font-size: 18px;
+    padding-right: 5px;
+  }
+  
+  
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 16px;
+    z-index: 1;
+  }
+  
+  
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    background-color: rgb(83, 83, 83);
+  }
+  
+  
+  .dropdown-content a:hover {
+    background-color: #c56262;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    font-size: xx-large;
+  }
+  
+  
+  
+  .dropdown:hover .a {
+    color: rgb(18, 176, 224);
+  }
+  
+  
+  
+  .header h1 {
+    font-size: 70px;
+  }
+  
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 200vh;
+  }
+  
+  section {
+    height: 100vh;
+    width: 200vh;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+  }
+  
+  .one {
+    max-width: 100%;
+    height: 75%;
+    font-size: x-large;
+    
+    
+  }
+  
+  .two {
+    background-color: rgb(255, 255, 255);
+   
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Three columns side by side */
+.column {
+    float: left;
+    width: 33.3%;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding: 0 8px;
+  }
+  
+  /* Display the columns below each other instead of side by side on small screens */
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 50%;
+      display:block;
+    }
+  }
+  
+  /* Add some shadows to create a card effect */
+  
+  
+  /* Some left and right padding inside the container */
+  
+
+
+
+
+
+
+
+
+
+
+.container {
+  padding: 0 16px;
+  width: 100%;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #ffffff;
+}
+
+
+
+.textbox {
+  border: 2px solid #4CAF50; /* Border color */
+  padding: 20px; /* Space inside the box */
+  margin: 10px 0; /* Space outside the box */
+  background-color: #ffffff; /* Background color */
+  width: 300px; /* Width of the box */
+  font-family: Arial, sans-serif; /* Font style */
+}
+
+
+
+.textbox {
+  border: 2px solid #4CAF50;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #f9f9f9;
+  width: 300px;
+  font-family: Arial, sans-serif;
+  text-align: center; /* Center content inside the textbox */
+}
+
+.textbox-image {
+  width: 100%; /* Make the image fit the width of the textbox */
+  height: auto; /* Maintain the image's aspect ratio */
+  border-radius: 5px; /* Optional: slightly rounded corners for the image */
+  margin-bottom: 10px; /* Space between the image and the text/button */
+}
