@@ -124,10 +124,9 @@ section {
 }
 
 .two {
-  background-color: rgb(255, 255, 255);
- 
+  background-color: rgb(46, 44, 44);
+  
 }
-
 
 
 
@@ -163,6 +162,42 @@ section {
   border-radius: 5px; /* Optional: slightly rounded corners for the image */
   margin-bottom: 10px; /* Space between the image and the text/button */
 }
+
+
+
+
+
+.textbox2 {
+  border: 2px solid #4CAF50; /* Border color */
+  padding: 20px; /* Space inside the box */
+  margin: 10px 0; /* Space outside the box */
+  background-color: #ffffff; /* Background color */
+  width: 300px; /* Width of the box */
+  font-family: Arial, sans-serif; /* Font style */
+}
+
+
+
+.textbox2 {
+  border: 2px solid #4CAF50;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  width: 300px;
+  font-family: Arial, sans-serif;
+  text-align: center; /* Center content inside the textbox */
+}
+
+.textbox2-image {
+  width: 100%; /* Make the image fit the width of the textbox */
+  height: auto; /* Maintain the image's aspect ratio */
+  border-radius: 5px; /* Optional: slightly rounded corners for the image */
+  margin-bottom: 10px; /* Space between the image and the text/button */
+}
+
+
+
+
 
 
 
