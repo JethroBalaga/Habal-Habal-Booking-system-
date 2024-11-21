@@ -3,66 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Habal-habal Booking</title>
     <link rel="stylesheet" href="userpanel.css">
-    
-     <div id="navbar">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div id="navbar">
         <center>
-        <h1 style="color: rgb(255, 255, 255);">Habal-habal</h1>
+            <h1 style="color: rgb(255, 255, 255);">Habal-habal</h1>
         </center>
-        <div id="logo">
     </div>
     <div id="nav">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
+            <li><a href="login_user.html">login</a></li>
             <div class="dropdown"> 
-                <li><a >Register</a></li>
+                <li><a>Register</a></li>
                 <div class="dropdown-content">
                   <a href="driver.html">Driver</a>
                   <a href="user.html">User</a>
                 </div>
             </div>  
         </ul>
-
-</head>
-<body>
-  
-    <div class = "container">
-        <section class = "one">
-       
-    
-    
-    
-            </div>
-         
-    </section>
-    
-    <section class = "two">
-        
-        
-                     
-        
-        </section>
-        <footer class="footer">
-            <div class="footer-content">
-                <h3>Habal-habal Online booking</h3>
-                <p>Your trusted partner in online booking. Making journeys smoother and faster!</p>
-                <ul class="socials">
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Habal-habal Online booking</p>
-            </div>
-        </footer>
-        
     </div>
-    
-    
-    
+
+    <div class="container">
+        <section class="one">
+            <h2>Book Your Ride</h2>
+            <p>Select your pickup and destination points on the map below:</p>
+            <div id="map"></div>
+            <div id="booking-info">
+                <p><strong>Pickup:</strong> <span id="pickup-point">Not selected</span></p>
+                <p><strong>Destination:</strong> <span id="destination-point">Not selected</span></p>
+                <button id="confirm-booking" disabled>Confirm Booking</button>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Habal-habal Online Booking</h3>
+            <p>Your trusted partner in online booking. Making journeys smoother and faster!</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Habal-habal Online Booking</p>
+        </div>
+    </footer>
+
+<script>
+     class LeafletMap {
+    constructor(containerId, center, zoom) {
+        this.map = L.map(containerId).setView(center, zoom);
+        this.initTileLayer();
+    }
+
+    initTileLayer() {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(this.map);
+    }
+
+}
+
+/* Instantiate for map zoomed coordinates referencing the containerId, center, zoom */
+const myMap = new LeafletMap('map', [8.360004, 124.868419], 18);
+
+/* JSON for loading markers */
+</script>
 </body>
 </html>

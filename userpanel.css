@@ -213,3 +213,14 @@ html, body {
 .footer-bottom p {
     margin: 0;
 }
+
+
+
+#map {
+  height: 400px;
+  width: 100%;
+  margin: 20px 0;
+}
+.footer {
+  margin-top: 20px;
+}
