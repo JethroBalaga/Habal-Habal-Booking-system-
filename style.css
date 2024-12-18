@@ -9,83 +9,88 @@ body{
   background-size: cover;
  
 }
-#navbar{
-  top: 0px;
-  left: 0px;
+#navbar {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 75px;
-  z-index: 999;
   background-color: rgb(53, 51, 51);
   position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 999;
 }
-#navbar #nav{
-  float: left;
-  padding-top: 15px;
+
+
+/* Centered Title */
+#title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
 }
-li{
+
+#title h1 {
+  margin: 0;
+  font-size: 28px; /* Adjust for larger title */
+  font-weight: bold; /* Makes it a strong title */
+  color: rgb(255, 255, 255);
+  text-transform: uppercase; /* Adds title case */
+  letter-spacing: 2px; /* Spacing between letters */
+}
+
+/* Nav Section Styling */
+#nav ul {
   list-style: none;
-  display: inline-block;
-  padding-right: 40px;
+  display: flex; /* Aligns nav items horizontally */
+  margin: 0;
+  padding: 0;
 }
-li a{
+
+#nav li {
+  margin-right: 30px; /* Space between items */
+  position: relative; /* For dropdown positioning */
+}
+
+#nav a {
   text-decoration: none;
   color: rgb(255, 249, 241);
-  font-size: 18px;
-}
-li a:hover{
-  color: rgb(185, 112, 112);
-  font-size: xx-large;
- 
-}
-.logo {
-  float: left;
+  font-size: 18px; /* Uniform font size */
+  transition: color 0.3s ease, font-size 0.3s ease;
 }
 
-
-.dropdown{
-  text-decoration: none;
-  color: rgb(255, 249, 241);
-  font-size: 18px;
-  padding-right: 5px;
+#nav a:hover {
+  color: rgb(53, 110, 41);
+  font-size: 20px; /* Slightly larger on hover */
 }
 
-
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-
+/* Dropdown Content Styling */
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 16px;
-  z-index: 1;
+  top: 100%; /* Positioned below the parent menu */
+  left: 0;
+  background-color: rgb(83, 83, 83);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+  z-index: 1000;
 }
-
 
 .dropdown-content a {
-  color: rgb(255, 255, 255);
-  padding: 5px;
-  text-decoration: none;
   display: block;
-  background-color: rgb(83, 83, 83);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 16px; /* Slightly smaller for dropdown links */
+  transition: background-color 0.3s ease;
 }
-
 
 .dropdown-content a:hover {
-  background-color: #c56262;
+  background-color: #ffffff;
 }
+
 .dropdown:hover .dropdown-content {
-  display: block;
-  font-size: xx-large;
-}
-
-
-
-.dropdown:hover .a {
-  color: rgb(18, 176, 224);
+  display: block; /* Show dropdown on hover */
 }
 
 
@@ -117,6 +122,7 @@ li a:hover{
   overflow-y: scroll;
   height: 100vh;
   width: 200vh;
+  margin-top: 50px; /* Ensures content clears the navbar */
 }
 
 section {
@@ -129,7 +135,7 @@ section {
 
 .one {
   max-width: 100%;
-  height: 75%;
+  height: 80%;
   font-size: x-large;
   
   
@@ -154,6 +160,7 @@ section {
   background-color: #ffffff; /* Background color */
   width: 300px; /* Width of the box */
   font-family: Arial, sans-serif; /* Font style */
+  margin-top: 100px; /* Ensures content clears the navbar */
 }
 
 

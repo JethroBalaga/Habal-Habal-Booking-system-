@@ -1,0 +1,158 @@
+/* General body styling with gradient background */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Dark overlay for improved readability */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Main form container */
+form {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  width: 450px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form headings */
+h1 {
+  color: #333;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* Horizontal rule styling */
+hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 20px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus {
+  border-bottom: 2px solid #14b845;
+  box-shadow: 0 4px 8px rgba(20, 184, 69, 0.2);
+}
+
+/* Register button */
+.registerbtn {
+  background: linear-gradient(to right, #14b845, #2e8b57);
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(20, 184, 69, 0.3);
+}
+
+.registerbtn:hover {
+  background: linear-gradient(to right, #2e8b57, #3cb371);
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(20, 184, 69, 0.5);
+}
+
+/* Sign-in link */
+.container.signin p {
+  font-size: 14px;
+  color: #444;
+}
+
+.container.signin a {
+  color: #2e8b57;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.container.signin a:hover {
+  color: #14b845;
+  text-decoration: underline;
+}
+
+/* File upload styling */
+input[type="file"] {
+  border: none;
+  padding-left: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .registerbtn {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
